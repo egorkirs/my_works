@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <title>Lab5</title>
+</head>
+
+<body>
+
+    <p align="center" class="header">DROP US A LINE</p>
+    	<div class="contact" id="contact"> </div>
+	<div class="MainBox">
+    <div class="MainBox">
+        <div class="MainBox"><div class="cod"><a href="https://vk.com/id234882902">
+    	<img src="css/vk.png" height="25px" width="25px"></a></div>
+		<div class="code1"><img src="css/twitter.png"></div>
+		<div class="code1"><img src="css/mail.png"></div></div>
+    </div>
+     <div class="footer"> Terms & Coditions | legals </div>
+ 	</div>
+
+ <script>
+ 	class NewContact{
+ 		constructor(src, title, info){ this.src = src; this.title = title; this.info = info;}}
+ 	let adr = new NewContact("css/pin.png", "Adress", "Pushkin's Street, Kolotushkin's house")
+ 	let phn = new NewContact("css/phone.png", "Phone", "+88005553535")
+ 	let eml = new NewContact("css/message.png", "Email", "Example@gmail.com")
+ 	let contact_array = [adr, phn, eml]
+ 	let contact = document.getElementById('contact');
+ 	contact_array.forEach(
+ 		function(pic){
+ 			let html = `<div class="block">
+ 			<img src="${pic.src}">
+ 			<p class="contact_txt" style="color: #57d0bd">${pic.title}</p>
+ 			<p style="color: black;font-size: 21px;font-family: 'Caveat';font-weight: bold;
+ 			">${pic.info}</p></div>`
+ 			let gghf = document.createElement('div');
+ 			gghf.innerHTML = html;
+ 			contact.appendChild(gghf);
+ 		})
+ </script>
+</body>
+</html>
